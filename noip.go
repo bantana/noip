@@ -150,6 +150,7 @@ func main() {
 		log.Fatalln("Unable to determine the IP address, aborting...")
 	}
 
+	log.Printf("Updating %s with IP %s\n", *hostnameFlag, ip)
 	resp, err := updateIp(*hostnameFlag, ip)
 	if err != nil {
 		log.Fatalln(err)
